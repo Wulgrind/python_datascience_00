@@ -1,5 +1,4 @@
 from time import time, strftime, localtime
-from datetime import datetime
 
 seconds_since = time()
 

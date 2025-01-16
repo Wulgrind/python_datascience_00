@@ -6,7 +6,7 @@ def main():
     """Main func"""
 
     try:
-        if len(argv) != 3 or type(argv[1]) is str or type(int(argv[2])) is int:
+        if len(argv) != 3:
             raise (AssertionError())
         lst = argv[1].split(' ')
         n = int(argv[2])
