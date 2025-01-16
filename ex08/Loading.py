@@ -12,5 +12,6 @@ def ft_tqdm(lst: range) -> None:
         print(ret, end='')
         yield i
 
+
 if __name__ == '__main__':
     pass

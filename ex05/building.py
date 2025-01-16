@@ -1,4 +1,4 @@
-from sys import argv
+from sys import argv, stdin
 
 
 def main():
@@ -9,7 +9,8 @@ def main():
         arg = ""
         if len(argv) < 2 or len(argv[1]) < 1:
             while len(arg) < 1:
-                arg = input("Please provide a valid string.\n")
+                print("Please provide a valid string.")
+                arg = stdin.readline()
         elif len(argv) > 2:
             raise (AssertionError("Only one argument is accepted."))
         else:
@@ -18,7 +19,7 @@ def main():
         lower = 0
         punc = 0
         digits = 0
-        spaces = arg.count(' ') + arg.count('\r')
+        spaces = 0
         for i in arg:
             if i.isupper():
                 upper += 1
@@ -28,7 +29,8 @@ def main():
                 punc += 1
             if i in digits_list:
                 digits += 1
-        spaces = arg.count(' ')
+            if i.isspace():
+                spaces += 1
         print(f"The text contains {len(arg)} characters:")
         print(f"{upper} upper letters")
         print(f"{lower} lower letters")

@@ -48,9 +48,8 @@ def main():
             raise (AssertionError())
         for i in argv[1]:
             if not i.isalpha():
-                if not i in nested_morse:
-
-                    raise(AssertionError())
+                if i not in nested_morse:
+                    raise (AssertionError())
             if i.isdigit():
                 ret += nested_morse[i]
             else:
