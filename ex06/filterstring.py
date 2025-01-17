@@ -8,7 +8,7 @@ def main():
     try:
         if len(argv) != 3:
             raise (AssertionError())
-        lst = argv[1].split(' ')
+        lst = argv[1].split()
         n = int(argv[2])
         print(ft_filter(lambda x: len(x) > n, lst))
     except Exception:

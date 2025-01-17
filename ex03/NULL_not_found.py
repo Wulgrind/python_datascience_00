@@ -4,7 +4,7 @@ def NULL_not_found(object: any) -> int:
 
         def str_func():
             if t is str and len(object) > 1:
-                return ("Type not found")
+                raise ValueError()
             elif t is str:
                 return (f"Empty: {t}")
 
@@ -18,7 +18,7 @@ def NULL_not_found(object: any) -> int:
             print(ret[t])
         else:
             print(f'Nothing: None {t}')
+        return 0
+    except Exception:
+        print("Type not found")
         return 1
-    except Exception as e:
-        print(e)
-        return 2
